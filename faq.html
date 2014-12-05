@@ -1,0 +1,169 @@
+
+<html>
+<head>
+<style type="text/css">
+.menutitle{
+cursor:pointer;
+margin-bottom: 5px;
+background-color:#ECECFF;
+color:#000000;
+width:140px;
+padding:2px;
+text-align:center;
+font-weight:bold;
+/*/*/border:1px solid #000000;/* */
+}
+
+.submenu{
+margin-bottom: 0.5em;
+}
+</style>
+
+<script type="text/javascript">
+
+var persistmenu="yes" //"yes" or "no". Make sure each SPAN content contains an incrementing ID starting at 1 (id="sub1", id="sub2", etc)
+var persisttype="sitewide" //enter "sitewide" for menu to persist across site, "local" for this page only
+
+if (document.getElementById){ 
+document.write('<style type="text/css">\n')
+document.write('.submenu{display: none;}\n')
+document.write('</style>\n')
+}
+
+function SwitchMenu(obj){
+	if(document.getElementById){
+	var el = document.getElementById(obj);
+	var ar = document.getElementById("masterdiv").getElementsByTagName("span"); // change
+		if(el.style.display != "block"){ // change
+			for (var i=0; i<ar.length; i++){
+				if (ar[i].className=="submenu") // change
+				ar[i].style.display = "none";
+			}
+			el.style.display = "block";
+		}else{
+			el.style.display = "none";
+		}
+	}
+}
+
+function get_cookie(Name) { 
+var search = Name + "="
+var returnvalue = "";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) { 
+offset += search.length
+end = document.cookie.indexOf(";", offset);
+if (end == -1) end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+function onloadfunction(){
+if (persistmenu=="yes"){
+var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+var cookievalue=get_cookie(cookiename)
+if (cookievalue!="")
+document.getElementById(cookievalue).style.display="block"
+}
+}
+
+function savemenustate(){
+var inc=1, blockid=""
+while (document.getElementById("sub"+inc)){
+if (document.getElementById("sub"+inc).style.display=="block"){
+blockid="sub"+inc
+break
+}
+inc++
+}
+var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+var cookievalue=(persisttype=="sitewide")? blockid+";path=/" : blockid
+document.cookie=cookiename+"="+cookievalue
+}
+
+if (window.addEventListener)
+window.addEventListener("load", onloadfunction, false)
+else if (window.attachEvent)
+window.attachEvent("onload", onloadfunction)
+else if (document.getElementById)
+window.onload=onloadfunction
+
+if (persistmenu=="yes" && document.getElementById)
+window.onunload=savemenustate
+
+</script>
+<title>Home Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="javascript">var popUpWin=0;
+function popUpWindow(URLStr, left, top, width, height)
+{
+  if(popUpWin)
+  {
+    if(!popUpWin.closed) popUpWin.close();
+  }
+  popUpWin = open(URLStr, 'popUpWin', 'toolbar=no,location=no,directories=no,status=no,menub ar=no,scrollbar=no,resizable=no,copyhistory=yes,width='+width+',height='+height+',left='+left+', top='+top+',screenX='+left+',screenY='+top+'');
+}
+</script>
+</head>
+
+<body BGCOLOR=#FFFFFF LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0 rightmargin="0" bottommargin="0">
+<table width="725" height="100%"  border="0" cellspacing="0" cellpadding="0">
+  <TR>
+    <TD colspan="3"><IMG SRC="images/txt-13.gif" WIDTH=725 HEIGHT=30 ALT=""></TD>
+  </TR>
+  <tr>
+    <td width="2" height="100%" bgcolor="#8EBCD3"><img src="images/spacer.gif" width="2" height="1"></td>
+    <td valign="top" background="images/back-1.jpg" bgcolor="#FFFFFF" style="background-repeat:repeat-x;background-position:bottom"><table width="721px"  border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><div id="masterdiv" style=" padding-left:11px;padding-top:10px;padding-right:10px;line-height:13px">
+      <div onclick="SwitchMenu('sub1')"><span class="content"><strong><a href="#">How do I know how much house I can afford?</a></strong></span></div>
+      <span class="submenu" id="sub1"> <span class="style-1">Generally speaking, you can purchase a home with a value of two or three times your annual household income. However, the amount that you can borrow will also depend upon your employment history, credit history, current savings and debts, and the amount of down payment you are willing to make. You may also be able to take advantage of special loan programs for first time buyers to purchase a home with a higher value. Give us a call, and we can help you determine exactly how much you can afford.</span> </span>
+
+<br>
+<div  onclick="SwitchMenu('sub2')"><a href="#"><span class="content"><strong>What is the difference between a fixed-rate loan and an adjustable-rate loan?</strong></span></a></div>
+      <span class="submenu" id="sub2"><span class="style-1"> With a fixed-rate mortgage, the interest rate stays the same during the life of the loan. With an adjustable-rate mortgage (ARM), the interest changes periodically, typically in relation to an index. While the monthly payments that you make with a fixed-rate mortgage are relatively stable, payments on an ARM loan will likely change. There are advantages and disadvantages to each type of mortgage, and the best way to select a loan product is by talking to us. </span></span>
+      <br>
+<div  onclick="SwitchMenu('sub3')"><a href="#"><span class="content"><strong>How is an index and margin used in an ARM?</strong></span></a></div>
+      <span class="submenu" id="sub3"> <span class="style-1">An index is an economic indicator that lenders use to set the interest rate for an ARM. Generally the interest rate that you pay is a combination of the index rate and a pre-specified margin. Three commonly used indices are the One-Year Treasury Bill, the Cost of Funds of the 11th District Federal Home Loan Bank (COFI), and the London InterBank Offering Rate (LIBOR).</span> </span>
+      <br>
+<div onclick="SwitchMenu('sub4')"><span class="content"><strong><a href="#">How do I know which type of mortgage is best for me?</a></strong></span></div>
+      <span class="submenu" id="sub4"> <span class="style-1">There is no simple formula to determine the type of mortgage that is best for you. This choice depends on a number of factors, including your current financial picture and how long you intend to keep your house. TRIUMPH FUNDING CORP. can help you evaluate your choices and help you make the most appropriate decision.</span> </span>
+      <br>
+<div onclick="SwitchMenu('sub5')"><span class="content"><strong><a href="#">What does my mortgage payment include?</a></strong></span></div>
+      <span class="submenu" id="sub5"> <span class="style-1">For most homeowners, the monthly mortgage payments include three separate parts:
+      <li class="style-1">Principal: Repayment on the amount borrowed
+          <li class="style-1">Interest: Payment to the lender for the amount borrowed
+          <li class="style-1">Taxes &amp; Insurance: Monthly payments are normally made into a special escrow account for items like hazard insurance and property taxes. This feature is sometimes optional, in which case the fees will be paid by you directly to the County Tax Assessor and property insurance company. </li>
+      </span></span>
+      <br>
+<div onclick="SwitchMenu('sub6')"><a href="#"><span class="content"><strong>How much cash will I need to purchase a home?</strong></span></a></div>
+      <span class="submenu" id="sub6"> <span class="style-1">The amount of cash that is necessary depends on a number of items. Generally speaking, though, you will need to supply: </span> <span class="style-2">
+      <ul>
+        <li class="style-1">Earnest Money: The deposit that is supplied when you make an offer on the house Down Payment: A percentage of the cost of the home that is due at settlement 
+	        <li class="style-1">Closing Costs: Costs associated with processing paperwork to purchase or refinance a house </li>
+      </ul>
+    </span></span> </div></td>
+  </tr>
+</table></td>
+    <td width="2" height="100%" rowspan="1" bgcolor="#8EBCD3"><img src="images/spacer.gif" width="2" height="1"></td>
+  </tr>
+
+  <tr bgcolor="#B0C7E5">
+    <td height="3" colspan="5"><img src="images/spacer.gif" width="8" height="2"></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td colspan="3" height="32" align="center"><div style=" padding-top:10px;padding-left:20px"><a href="#" style="color:#006599;text-decoration:none">Copyright 2005-2006 &copy; Triumph Funding Corp. All rights reserved.</a></div></td>
+  </tr>
+  <tr bgcolor="#B0C7E5">
+    <td colspan="3" height="3"><img src="images/spacer.gif" width="1" height="1"></td>
+  </tr>
+  <tr>
+    <td colspan="3" height="56" background="images/end-11.jpg" style="background-repeat:repeat;background-position:bottom"><img src="images/spacer.gif" width="1" height="1"></td>
+  </tr>
+</table>
+</body>
+</html>

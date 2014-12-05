@@ -1,0 +1,133 @@
+
+<html>
+<head>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: 1C1C1C;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	scrollbar-arrow-color: #0166ff;
+	scrollbar-3dlight-color: #686868;
+	scrollbar-highlight-color: #EDEDED;
+	scrollbar-face-color: #868686;
+	scrollbar-shadow-color: #2F2E2E;
+	scrollbar-darkshadow-color: #000000;
+	scrollbar-track-color: #D4D4D4;
+}
+img{border:0;}
+a {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: FFFFFF;
+}
+a:visited {
+	color: FFFFFF;
+}
+a:hover {
+	color: FFFFFF;
+}
+a:active {
+	color: FFFFFF;
+}
+-->
+</style>
+<title>faqs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<script type="text/javascript" language="javascript" src="js/roth.js"></script>
+<body bgcolor="#ffffff" background="images/5-back-30.jpg" leftmargin="0px" topmargin="0px" style="background-repeat:repeat-x;background-position:bottom; background-attachment:fixed; background-image:url(images/back-1.jpg);">
+<table width="100%"  border="0" cellspacing="0" cellpadding="5">
+  <tr background="images/5-back-30.jpg">
+    <td height="100%" valign="top" style="background-repeat:repeat-x;background-position:top;padding-top:12px;padding-left:16px; padding-right:16px; "><form action="" method="post" name="temps" id="temps">
+      <span class="bold">This calculator shows the potential differences
+              between the values of a Roth IRA, a Traditional IRA, and a plain
+              savings account over time. Fill in the following information and
+        click the Calculate button for results.</span>
+      <br>
+      <span class="style-2"><br>
+      Roth Vs. Traditional IRA      
+      </span>
+      <table id="table_1" class="formTable" cellspacing="0">
+        <thead>
+          <tr>
+            <th id="th_1" colspan="2"></th>
+          </tr>
+        </thead>
+        <tfoot>
+        </tfoot>
+        <tbody>
+          <tr class="required">
+            <td class="labelColumn">Beginning balance:</td>
+            <td class="valueColumn"><input name="BB" value="$1,000" onblur="computeForm(this.form)" onfocus="document.temps.BB.select(); document.temps.BB.focus();" onchange="basicedit();this.value=formatCurrency(this.value);" maxlength="9" /></td>
+          </tr>
+          <tr>
+            <td class="labelColumn">Annual interest rate:</td>
+            <td class="valueColumn"><input name="IR" value="12%" onblur="computeForm(this.form)" onfocus="document.temps.IR.select(); document.temps.IR.focus();" onchange="basicedit();this.value=addPct(this.value);" maxlength="5" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn">Annual contribution:</td>
+            <td class="valueColumn"><input name="MS" value="$2,000" onblur="computeForm(this.form)" onfocus="document.temps.MS.select(); document.temps.MS.focus();" onchange="basicedit();this.value=formatCurrency(this.value);" maxlength="6" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn">Current age:</td>
+            <td class="valueColumn"><input name="CA" value="40" onblur="computeForm(this.form)" onfocus="document.temps.CA.select(); document.temps.CA.focus();" maxlength="5" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn">Retirement age:</td>
+            <td class="valueColumn"><input name="RA" value="65" onblur="computeForm(this.form)" onfocus="document.temps.RA.select(); document.temps.RA.focus();" maxlength="5" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn">Marginal tax rate*:</td>
+            <td class="valueColumn"><input name="MTR" value="28%" onblur="computeForm(this.form)" onfocus="document.temps.MTR.select(); document.temps.MTR.focus();" onchange="basicedit();this.value=addPct(this.value);" maxlength="5" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <input name="button" type="button" class="button" id="calculate" onclick="javascript:computeForm(document.temps);" value="Calculate"/>
+      </div>
+      <div id="containerResultsTable">
+        <div id="tblHdr"> <span id="span_1">Results:</span> <span id="span_2" align="right"><a id="a_printPage" href="javascript:window.print();">print this page</a></span> </div>
+        <div style="clear:both"></div>
+        <table id="table_2" class="table" cellspacing="0">
+          <thead>
+            <tr>
+              <th id="th_3" colspan="2">&nbsp;</th>
+            </tr>
+          </thead>
+          <tfoot>
+          </tfoot>
+          <tbody>
+            <tr class="altColor1">
+              <td class="col1">Roth IRA after taxes:</td>
+              <td class="col2"><input type="text" name="RI" size="10" value="$" /></td>
+            </tr>
+            <tr class="altColor2">
+              <td class="col1">Traditional IRA after taxes <span style="font-size: 10px;">(assumes reinvestment of tax savings in conventional taxable account)</span>:</td>
+              <td class="col2"><input type="text" name="TS" size="10" value="$" /></td>
+            </tr>
+            <tr class="altColor1">
+              <td class="col1">Conventional taxable savings:</td>
+              <td class="col2"><input type="text" name="TS1" size="10" value="$" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+    <script language="JavaScript" type="text/javascript">
+            //<![CDATA[
+                computeForm(document.forms.temps);
+                document.forms.temps.elements[0].focus();
+                document.forms.temps.elements[0].select();
+            //]]>
+            </script></td>
+  </tr>
+
+</table>
+</body>
+</html>

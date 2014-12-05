@@ -1,0 +1,50 @@
+body,td,th {
+	font-family: tahoma;
+	font-size: 11px;
+	color: #000000;
+	vertical-align: top;	
+	line-height:12px;
+}
+img{border:0;}
+a {
+	font-family:tahoma;
+	font-size: 11px;	
+	color: #3691C7;		
+}
+a:visited {
+	color: #3691C7;
+}
+a:hover {
+	color: #3691C7;
+}
+a:active {
+	color: #3691C7;	
+}
+.style-1{
+	color:#333333;
+}
+.style-2{
+	color:#3691C7;
+}
+.style-3{
+	color:#000000;
+}
+.bold{
+	color:#114C8E;
+	font-weight:bold;
+}
+
+
+
+
+
+
+.style4 {
+	color: #FFFFFF;
+}
+.style-5 {
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 18px;
+	color: #114C8E;
+	line-height: 16px;
+}

@@ -1,0 +1,84 @@
+
+<html>
+<head>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: 1C1C1C;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	scrollbar-arrow-color: #0166ff;
+	scrollbar-3dlight-color: #686868;
+	scrollbar-highlight-color: #EDEDED;
+	scrollbar-face-color: #868686;
+	scrollbar-shadow-color: #2F2E2E;
+	scrollbar-darkshadow-color: #000000;
+	scrollbar-track-color: #D4D4D4;
+}
+img{border:0;}
+a {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: FFFFFF;
+}
+a:visited {
+	color: FFFFFF;
+}
+a:hover {
+	color: FFFFFF;
+}
+a:active {
+	color: FFFFFF;
+}
+-->
+</style>
+<title>faqs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<script type="text/javascript" language="javascript" src="js/amortization.js"></script>
+<body bgcolor="#FFFFFF" background="images/5-back-30.jpg" leftmargin="0px" topmargin="0px" style="background-repeat:repeat-x;background-position:bottom; background-attachment:fixed; background-image:url(images/back-1.jpg);">
+<table width="100%"  border="0" cellspacing="0" cellpadding="5">
+  <tr background="images/5-back-30.jpg">
+    <td height="100%" valign="top"><form action="" method="post" name="form" id="temps">
+            <span class="bold">This simple calculator allows you to calculate a fixed-rate
+            amortization schedule. Fill in the following information and click
+            the Calculate button for results.</span><br>
+            <span class="style-2"><br>
+Amortization Calculator</span>      <div id="containerCalcTable">
+      <table id="table_1" cellspacing="0">
+        <thead>
+          <tr>
+            <th id="th_1" colspan="2"></th>
+          </tr>
+        </thead>
+        <tfoot>
+        </tfoot>
+        <tbody>
+          <tr>
+            <td>Loan Amount:</td>
+            <td><input type="text" name="p" size="15" onfocus="document.form.p.select(); document.form.p.focus();" value="$125,000" onchange="basicedit();this.value=formatCurrency(this.value);" maxlength="9" /></td>
+          </tr>
+          <tr>
+            <td>Number of Payments:</td>
+            <td><input type="text" name="y" size="15" onfocus="document.form.y.select(); document.form.y.focus();" value="360" onchange="basicedit();" maxlength="5" /></td>
+          </tr>
+          <tr>
+            <td>Interest Rate:</td>
+            <td><input type="text" name="ir" size="15" onfocus="document.form.ir.select(); document.form.ir.focus();" value="7.5%" onchange="basicedit();this.value=addPct(this.value);" maxlength="6" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <input name="button" type="button" id="calculate" onclick="javascript:computeForm(document.form);" value="Calculate"/>
+      </div>
+    </form></td>
+  </tr>
+
+</table>
+</body>
+</html>

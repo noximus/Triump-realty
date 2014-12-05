@@ -1,0 +1,111 @@
+
+<html>
+<head>
+<title>Home Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="javascript">
+<!--
+var popUpWin=0;
+function popUpWindow(URLStr, left, top, width, height)
+{
+  if(popUpWin)
+  {
+    if(!popUpWin.closed) popUpWin.close();
+  }
+  popUpWin = open(URLStr, 'popUpWin', 'toolbar=no,location=no,directories=no,status=no,menub ar=no,scrollbar=no,resizable=no,copyhistory=yes,width='+width+',height='+height+',left='+left+', top='+top+',screenX='+left+',screenY='+top+'');
+}
+
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  
+    parent.content.location.href="calculators.html"
+    parent.document.getElementById("services").src='"+selObj.options[selObj.selectedIndex].value+"'
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
+</head>
+
+<body BGCOLOR=#FFFFFF LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0 rightmargin="0" bottommargin="0">
+<table width="725" height="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="2" width="241"><img src="images/txt-18.gif" width=241 height=30 alt=""></td>
+    <td width="2"><img src="/images/spacer.gif" width="2" height="1"></td>
+    <td width="239"><img src="images/txt-19.gif" width=239 height=30 alt=""></td>
+    <td width="2"><img src="/images/spacer.gif" width="2" height="1"></td>
+    <td colspan="2" width="241"><img src="images/txt-6.gif" width=239 height=30 alt=""></td>
+  </tr>
+  <tr>
+    <td width="3" height="100%" bgcolor="#91BDD5"><h3><img src="images/spacer.gif" width="3" height="1"></h3></td>
+    <td width="238" bgcolor="#FFFFFF" background="images/back-1.jpg" style="background-repeat:repeat-x;background-position:bottom"><div style=" padding-left:15px;padding-top:14px; padding-right:15px" class="style-1">          <span class="bold">&bull;</span> <a href="http://www.mbaa.org/consumer/index.html" target="_blank">Mortgage Bankers Association of America Consumer Information </a><br>
+            <span class="bold">&bull;</span> <a href="http://www.federalreserve.gov/consumers.htm" target="_blank">Federal Reserve Board Consumer Information </a><br>
+            <span class="bold">&bull;</span> <a href="http://www.freddiemac.com/homebuyers" target="_blank">Homebuyer Education by Freddie Mac </a><br>
+            <span class="bold">&bull;</span> <a href="http://www.usps.com/moversguide/welcome.htm" target="_blank">United States Postal Service Official Movers Guide </a><br>
+            <span class="bold">&bull;</span> <a href="http://www.mortgageleadguide.com/Mortgage_Broker_Directory_List.asp" target="_blank">National Mortgage Brokers Directory </a><br>
+            <span class="bold">&bull;</span> <a href="http://www.greatlakesrealestate.com/search.php" target="_blank">Great Lakes Real Estate </a><br>
+             <span class="bold">&bull;</span> <a href="http://www.buffalo.com/" target="_blank">Buffalo.com </a>    </div>
+    </td>
+    <td width="2" background="images/vline.gif" bgcolor="#EAEAEA" style="background-repeat:repeat-y;background-position:top"><img src="images/spacer.gif" width="1" height="1"></td>
+    <td width="239" bgcolor="#FFFFFF" background="images/back-2.jpg" style="background-repeat:repeat-x;background-position:bottom"><div style=" padding-left:15px;padding-top:14px; padding-right:15px">    <span class="bold">&bull;</span> <a href="forms/Loan-Application-1003-2004.pdf" target="forms">Loan Application (1003)</a><br>
+    <span class="bold">&bull;</span> <a href="forms/Loan-Application-1003-Spanish-2004.pdf" target="forms">Loan Application (1003) - Spanish </a> <br>
+    <span class="bold">&bull;</span> <a href="forms/Borrower-Signature-Authorization.pdf" target="forms">Borrower Signature Authorization </a> <br>
+    <span class="bold">&bull;</span> <a href="forms/Borrower-Certification-and-Authorization.pdf" target="forms">Borrower's Certification &amp; Authorization </a> <br>
+    <span class="bold">&bull;</span> <a href="forms/Truth-In-Lending.pdf" target="forms">Truth-In-Lending </a> <br>
+    <span class="bold">&bull;</span> <a href="forms/Truth-In-Lending-Section-32.pdf" target="forms">Truth-In-Lending Section 32 Disclosure </a> <br>
+    <span class="bold">&bull;</span> <a href="forms/Equal-Credit-Opportunity-Act-Disclosure.pdf" target="forms">Equal Credit Opportunity Act Disclosure </a> <br>
+    <span class="bold">&bull;</span> <a href="forms/Fair-Lending-Notice-Disclosure.pdf" target="forms">Fair Lending Notice Disclosure<br>
+    <br>
+    </a><span class="style-3">Adobe Acrobat Reader is required in order to view these documents.&nbsp; If you do not have Acrobat Reader, <a href="http://www.adobe.com/products/acrobat/readstep2.html" target="_blank">click here </a> to download it. </span>
+    <div style=" padding-left:6px;padding-top:10px"></div>
+</div></td>
+    <td width="2" background="images/vline.gif" bgcolor="#EAEAEA" style="background-repeat:repeat-y;background-position:top"><img src="/images/spacer.gif" width="1" height="1"></td>
+    <td width="238" bgcolor="#FFFFFF" background="images/back-3.jpg" style="background-repeat:repeat-x;background-position:bottom"><div style=" padding-left:13px;padding-top:10px;"> <span class="bold">See how much you can lower your monthly payments! </span><br>
+  Pay off your mortgage early or find <br>
+  out how much cash you can get back.<br>
+  <br>
+  <br>
+  <select name="menu1" onChange="MM_jumpMenu('parent.frames[\'services\']',this,0)" style="width:212px;height:18px;font-size:11px;background-color:#CDCDAE;margin-bottom:12px">
+    <option selected>Select a Calulator</option>
+    <option value="howmuch.html">How much will my payments be?</option>
+    <option value="amortization.html">Amortization Calculator</option>
+    <option value="fuckyou">Should I refinance?</option>
+    <option value="fuckyou">How much can I afford?</option>
+    <option value="fuck you">Rent Vs. Own</option>
+    <option value="fuck you">Roth Vs. Traditional IRA</option>
+    <option value="fuck you">How long to pay off my credit cards?</option>
+  </select>
+  <br>
+  <img src="images/line-1.gif" width="221" height="1">
+  <div class="style-3" style=" padding-top:10px;padding-bottom:6px">
+    <table width="211" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="64"><img src="images/pic-1.jpg" width="64" height="55"></td>
+        <td width="147"><div style="padding-left:5px; ">
+            <div class="style-3" style=" padding-top:10px;padding-bottom:6px">Apply now.</div>
+            <span class="bold">&bull;</span> <a href="https://www.secureloandocs.com/shortApp.php?id=72256621&loId=%20" target="_blank">Short Loan Application (Pre-Qualify)</a><br>
+            <span class="bold">&bull;</span> <a href="https://www.secureloandocs.com/page1.php?id=72256621&loId=" target="_blank">Long Loan Application</a></div></td>
+      </tr>
+      <tr>
+        <td colspan="2"><div class="style-3" style="padding-top:10px; "></div></td>
+      </tr>
+    </table>
+    <br>
+  </div>
+    </div></td>
+    <td width="3" height="100%" bgcolor="#91BDD5"><img src="images/spacer.gif" width="3" height="1"></td>
+  </tr>
+  <tr bgcolor="C0D6E2">
+    <td width="725" height="3" colspan="7"><img src="images/spacer.gif" width="1" height="1"></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td colspan="7" height="32" align="center"><div style=" padding-top:10px;padding-left:20px"><a href="#" style="color:#006599;text-decoration:none">Copyright 2005-2006 &copy; Triumph Funding Corp. All rights reserved.</a></div></td>
+  </tr>
+  <tr bgcolor="#B0C7E5">
+    <td colspan="7" height="3"><img src="images/spacer.gif" width="1" height="1"></td>
+  </tr>
+  <tr>
+    <td colspan="7" height="56" background="images/end-11.jpg" style="background-repeat:repeat;background-position:bottom"><img src="images/spacer.gif" width="1" height="1"></td>
+  </tr>
+</table>
+</body>
+</html>

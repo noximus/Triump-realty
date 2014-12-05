@@ -1,0 +1,117 @@
+
+<html>
+<head>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: 1C1C1C;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	scrollbar-arrow-color: #0166ff;
+	scrollbar-3dlight-color: #686868;
+	scrollbar-highlight-color: #EDEDED;
+	scrollbar-face-color: #868686;
+	scrollbar-shadow-color: #2F2E2E;
+	scrollbar-darkshadow-color: #000000;
+	scrollbar-track-color: #D4D4D4;
+}
+img{border:0;}
+a {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: FFFFFF;
+}
+a:visited {
+	color: FFFFFF;
+}
+a:hover {
+	color: FFFFFF;
+}
+a:active {
+	color: FFFFFF;
+}
+-->
+</style>
+<title>faqs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<script type="text/javascript" language="javascript" src="js/millionaire.js"></script>
+<body bgcolor="#C5C5C5" background="images/5-back-30.jpg" leftmargin="0px" topmargin="0px" style="background-repeat:repeat-x; background-position:top; background-attachment:fixed; ">
+<table width="100%"  border="0" cellspacing="0" cellpadding="5">
+  <tr background="images/5-back-30.jpg">
+    <td height="100%" valign="top" style="background-repeat:repeat-x;background-position:top;padding-top:12px;padding-left:16px; padding-right:16px; "><form action="" method="post" name="temps" id="temps">
+      <div id="containerCalcTable">
+      <table id="table_1" class="formTable" cellspacing="0">
+        <thead>
+          <tr>
+            <th id="th_1" colspan="2"></th>
+          </tr>
+        </thead>
+        <tfoot>
+        </tfoot>
+        <tbody>
+          <tr class="required">
+            <td class="labelColumn"><span>Amount Currently Invested:</span></td>
+            <td class="valueColumn"><input onfocus="document.temps.BB.select(); document.temps.BB.focus();" maxlength="9" onchange="basicedit();this.value=formatCurrency(this.value);" size="15" name="BB" /></td>
+          </tr>
+          <tr>
+            <td class="labelColumn"><span>Monthly Investment:</span></td>
+            <td class="valueColumn"><input onfocus="document.temps.MS.select(); document.temps.MS.focus();" maxlength="9" onchange="basicedit();this.value=formatCurrency(this.value);" size="15" name="MS" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn"><span>Expected Rate of Return:</span></td>
+            <td class="valueColumn"><input onfocus="document.temps.IR.select(); document.temps.IR.focus();" maxlength="5" onchange="basicedit();this.value=addPct(this.value);" size="15" name="IR" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn"><span>Millionaire Target Age:</span></td>
+            <td class="valueColumn"><input onfocus="document.temps.RA.select(); document.temps.RA.focus();" maxlength="5" size="15" name="RA" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn"><span>Current Age:</span></td>
+            <td class="valueColumn"><input onfocus="document.temps.CA.select(); document.temps.CA.focus();" maxlength="5" size="15" name="CA" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <input name="button" type="button" class="button" id="calculate" onclick="javascript:computeForm(document.temps);" value="Calculate"/>
+      </div>
+      <div id="containerResultsTable">
+        <div id="tblHdr"> <span id="span_1">Results:</span> <span id="span_2" align="right"><a id="a_printPage" href="javascript:window.print();">print this page</a></span> </div>
+        <div style="clear:both"></div>
+        <table id="table_2" class="table" cellspacing="0">
+          <thead>
+            <tr>
+              <th id="th_3" colspan="2">&nbsp;</th>
+            </tr>
+          </thead>
+          <tfoot>
+          </tfoot>
+          <tbody>
+            <tr class="altColor1">
+              <td class="col1">Millionaire age at current rate:</td>
+              <td class="col2"><input class="c2" readonly="readonly" size="10" name="MA" /></td>
+            </tr>
+            <tr class="altColor2">
+              <td class="col1">Monthly investiment to reach millionaire goal:</td>
+              <td class="col2"><input class="c2" readonly="readonly" size="10" name="MI" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+    <script language="JavaScript" type="text/javascript">
+            //<![CDATA[
+                computeForm(document.forms.temps);
+                document.forms.temps.elements[0].focus();
+                document.forms.temps.elements[0].select();
+            //]]>
+            </script></td>
+  </tr>
+
+</table>
+</body>
+</html>

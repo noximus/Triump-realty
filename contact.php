@@ -1,0 +1,105 @@
+
+<html>
+<head>
+<title>Home Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body BGCOLOR=#FFFFFF LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0 rightmargin="0" bottommargin="0">
+<table width="725" height="100%"  border="0" cellspacing="0" cellpadding="0">
+  <TR>
+    <TD colspan="2" width="180"><IMG SRC="images/txt-15.gif" WIDTH=180 HEIGHT=30 ALT=""></TD>
+    <TD width="2"><IMG SRC="images/spacer.gif" WIDTH=2 HEIGHT=30 ALT=""></TD>
+    <TD width="300"><IMG SRC="images/txt-16.gif" WIDTH=300 HEIGHT=30 ALT=""></TD>
+    <TD width="2"><IMG SRC="images/spacer.gif" WIDTH=2 HEIGHT=30 ALT=""></TD>
+    <TD colspan="2" width="241"><IMG SRC="images/txt-17.gif" WIDTH=241 HEIGHT=30 ALT=""></TD>
+  </TR>
+  <tr>
+    <td width="3" height="100%" bgcolor="#91BFD6"><img src="images/spacer.gif" width="3" height="1"></td>
+    <td width="238" bgcolor="#FFFFFF" background="images/back-1.jpg" style="background-repeat:repeat-x;background-position:bottom">
+      <div style=" line-height:14px;padding-top:10px;padding-left:10px;" class="style-1"><span class="bold">Triumph Funding Corp.</span><br>
+          <br>
+  1000 Woodbury Rd Suite 107<br>
+  Woodbury, NY 11797<br>
+  Freephone: <br>
+  1 866 389 8700<br>
+  Telephone: <br>
+  1 516 224 8800<br>
+  FAX: <br>
+  1 800 456 3698 </div>    </td>
+    <td width="2" background="images/vline.gif" bgcolor="#EAEAEA" style="background-repeat:repeat-y;background-position:top"><img src="images/spacer.gif" width="2" height="1"></td>
+    <td width="321" background="images/back-2.jpg" bgcolor="#FFFFFF" style="background-repeat:repeat-x;background-position:bottom">
+      <form style="margin-left:10px;margin-top:13px;" action="sendcontact.php" method="post">
+        <table width="262"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="50%"><span class="bold">Your Name: </span>
+
+              <br>              </td>
+            <td width="50%"><div align="right">
+              <input name="name" type="text" style="width:132px;height:18px;font-size:11px;background-color:#CDCDAE;margin-bottom:2px;">            
+            </div></td>
+          </tr>
+          <tr>
+            <td><span class="bold">E-mail: </span></td>
+            <td><div align="right">
+              <input name="email" type="text" style="width:132px;height:18px;font-size:11px;background-color:#CDCDAE;margin-bottom:2px;margin-top:2px;">
+            </div></td>
+          </tr>
+          <tr>
+            <td><span class="bold">Telephone: </span></td>
+            <td><div align="right">
+              <input name="phone" type="text" style="width:132px;height:18px;font-size:11px;background-color:#CDCDAE;margin-bottom:2px">
+            </div></td>
+          </tr>
+          <tr>
+            <td><span class="bold">FAX: </span></td>
+            <td><div align="right">
+              <input name="fax" type="text" style="width:132px;height:18px;font-size:11px;background-color:#CDCDAE;margin-bottom:2px">
+            </div></td>
+          </tr>
+          <tr>
+            <td><div align="left" class="bold" style=" ">Your Message:</div></td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="2"><div align="left">
+              <textarea name="comment" cols="" rows="" style="width:260px;height:100px;font-size:11px;background-color:#CDCDAE;margin-top:2px;margin-bottom:2px;overflow:auto;font-family:tahoma"></textarea>
+              <input name="image" type="image" src="images/reset.jpg" align="absmiddle" width="112" height="17" border="0">
+              <input name="image" type="image" style="margin-left:13px " src="images/submit.jpg" align="absmiddle" width="112" height="17" border="0">
+              <input type="hidden" value="henry@nycprint.com" name="recipient">
+            </div></td>
+          </tr>
+        </table>
+      </form>
+    </td>
+    <td width="2" background="images/vline.gif" bgcolor="#EAEAEA" style="background-repeat:repeat-y;background-position:top"><img src="images/spacer.gif" width="2" height="1"></td>
+    <td width="156" bgcolor="#FFFFFF" background="images/back-3.jpg" style="background-repeat:repeat-x;background-position:bottom">
+      <div style=" padding-left:10px;padding-top:10px;line-height:14px"> <strong class="bold">Support center:</strong><br>
+          <a href="#">cupport@company.com</a><br>
+          <br>
+          <span class="bold">Sales questions:</span><br>
+          <a href="#">sales@company.com</a><br>
+          <br>
+          <span class="bold">Web questions:</span><br>
+          <a href="#">web@company.com</a><br>
+          <br>
+          <span class="bold">User guide:</span><br>
+    <a href="#">user-g@company.com</a> </div></td>
+    <td width="3" height="100%" bgcolor="#8FBCD9"><img src="images/spacer.gif" width="3" height="1"></td>
+  </tr>
+  <tr bgcolor="#B0C7E5">
+    <td width="725" height="2" colspan="7"><img src="images/spacer.gif" width="8" height="3"></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td colspan="7" width="725" height="32" align="center"><div style=" padding-top:10px;padding-left:20px"><a href="#" style="color:#006599;text-decoration:none">Copyright 2005-2006 &copy; Triumph Funding Corp. All rights reserved.</a></div></td>
+  </tr>
+  <tr bgcolor="#B0C7E5">
+    <td colspan="7" width="725" height="3"><img src="images/spacer.gif" width="1" height="1"></td>
+  </tr>
+  <tr>
+    <td colspan="7" width="725" height="56" background="images/end-11.jpg" style="background-repeat:repeat;background-position:bottom"><img src="images/spacer.gif" width="1" height="1"></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,118 @@
+
+<html>
+<head>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: 1C1C1C;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	scrollbar-arrow-color: #0166ff;
+	scrollbar-3dlight-color: #686868;
+	scrollbar-highlight-color: #EDEDED;
+	scrollbar-face-color: #868686;
+	scrollbar-shadow-color: #2F2E2E;
+	scrollbar-darkshadow-color: #000000;
+	scrollbar-track-color: #D4D4D4;
+}
+img{border:0;}
+a {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: FFFFFF;
+}
+a:visited {
+	color: FFFFFF;
+}
+a:hover {
+	color: FFFFFF;
+}
+a:active {
+	color: FFFFFF;
+}
+-->
+</style>
+<title>faqs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<script type="text/javascript" language="javascript" src="js/credit.js"></script>
+<body bgcolor="#ffffff" background="images/5-back-30.jpg" leftmargin="0px" topmargin="0px" style="background-repeat:repeat-x;background-position:bottom; background-attachment:fixed; background-image:url(images/back-1.jpg);">
+<table width="100%"  border="0" cellspacing="0" cellpadding="5">
+  <tr background="images/5-back-30.jpg">
+    <td height="100%" valign="top" style="background-repeat:repeat-x;background-position:top;padding-top:12px;padding-left:16px; padding-right:16px; "><form action="" method="post" name="temps" id="temps">
+      <span class="bold">This calculator will tell you how long it will take you to pay off your credit card bills with the amount you pay now, and how much more you would have to pay each month to eliminate your debt even sooner. Fill in the following information and click the Calculate button for results.</span>
+      <br>
+      <br>
+      j<span class="style-2">How long to pay off my credit cards?
+      </span>      
+      <table id="table_1" class="formTable" cellspacing="0">
+        <thead>
+          <tr>
+            <th id="th_1" colspan="2"></th>
+          </tr>
+        </thead>
+        <tfoot>
+        </tfoot>
+        <tbody>
+          <tr class="required">
+            <td class="labelColumn">Current Balance:</td>
+            <td class="valueColumn"><input type="text" name="LA" value="" onblur="basicedit();prefillForm(this.form);computeForm(this.form)" onfocus="document.temps.LA.select(); document.temps.LA.focus();" onchange="basicedit();this.value=formatCurrency(this.value);" maxlength="9" size="15" /></td>
+          </tr>
+          <tr>
+            <td class="labelColumn">Current Monthly Payment:</td>
+            <td class="valueColumn"><input type="text" name="MP" value="" onfocus="document.temps.MP.select(); document.temps.MP.focus();" onchange="basicedit();this.value=formatCurrency(this.value);" maxlength="9" size="15" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn">Interest Rate:</td>
+            <td class="valueColumn"><input type="text" name="IR" value="" onfocus="document.temps.IR.select(); document.temps.IR.focus();" onchange="basicedit();this.value=addPct(this.value);" maxlength="5" size="15" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn">Payoff Goal (in months):</td>
+            <td class="valueColumn"><input type="text" name="YR" value="" onfocus="document.temps.YR.select(); document.temps.YR.focus();" maxlength="6" size="15" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <input name="button" type="button" class="button" id="calculate" onclick="javascript:computeForm(document.temps);" value="Calculate"/>
+      </div>
+      <div id="containerResultsTable">
+        <div id="tblHdr"> <span id="span_1">Results:</span> <span id="span_2" align="right"><a id="a_printPage" href="javascript:window.print();">print this page</a></span> </div>
+        <div style="clear:both"></div>
+        <table id="table_2" class="table" cellspacing="0">
+          <thead>
+            <tr>
+              <th id="th_3" colspan="2">&nbsp;</th>
+            </tr>
+          </thead>
+          <tfoot>
+          </tfoot>
+          <tbody>
+            <tr class="altColor1">
+              <td class="col1">Months to Pay Off at Present Rate:</td>
+              <td class="col2"><input name="PO" size="10" class="c2" readonly="readonly" /></td>
+            </tr>
+            <tr class="altColor2">
+              <td class="col1">Monthly Payment Required to Reach Pay Off Goal:</td>
+              <td class="col2"><input name="PI" size="10" class="c2" readonly="readonly" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+    <script language="JavaScript" type="text/javascript">
+            //<![CDATA[
+                computeForm(document.forms.temps);
+                document.forms.temps.elements[0].focus();
+                document.forms.temps.elements[0].select();
+            //]]>
+            </script></td>
+  </tr>
+
+</table>
+</body>
+</html>

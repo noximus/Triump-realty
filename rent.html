@@ -1,0 +1,169 @@
+
+<html>
+<head>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: 1C1C1C;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	scrollbar-arrow-color: #0166ff;
+	scrollbar-3dlight-color: #686868;
+	scrollbar-highlight-color: #EDEDED;
+	scrollbar-face-color: #868686;
+	scrollbar-shadow-color: #2F2E2E;
+	scrollbar-darkshadow-color: #000000;
+	scrollbar-track-color: #D4D4D4;
+}
+img{border:0;}
+a {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: FFFFFF;
+}
+a:visited {
+	color: FFFFFF;
+}
+a:hover {
+	color: FFFFFF;
+}
+a:active {
+	color: FFFFFF;
+}
+-->
+</style>
+<title>faqs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<script type="text/javascript" language="javascript" src="js/rent.js"></script>
+<body bgcolor="#ffffff" background="images/5-back-30.jpg" leftmargin="0px" topmargin="0px" style="background-repeat:repeat-x;background-position:bottom; background-attachment:fixed; background-image:url(images/back-1.jpg);">
+<table width="100%"  border="0" cellspacing="0" cellpadding="5">
+  <tr background="images/5-back-30.jpg">
+    <td height="100%" valign="top" style="background-repeat:repeat-x;background-position:top;padding-top:12px;padding-left:16px; padding-right:16px; "><form action="" method="post" name="temps" id="temps">
+          <span class="bold">This calculator allows you
+              to compare the advantages and disadvantages of owning vs. renting
+              a home. Fill in the following information and click the Calculate button for results.</span> <br>
+              <span class="style-2"><br>
+              Rent Vs. Own </span>    
+          <table id="table_1" class="formTable" cellspacing="0">
+        <thead>
+          <tr>
+            <th id="th_1" colspan="2"></th>
+          </tr>
+        </thead>
+        <tfoot>
+        </tfoot>
+        <tbody>
+          <tr class="required">
+            <td class="labelColumn">Current rent:</td>
+            <td class="valueColumn"><input type="text" name="RENT" size="15" value="$975" onblur="computeForm(this.form)" onfocus="document.temps.RENT.select(); document.temps.RENT.focus();" onchange="basicedit();this.value=formatCurrency(this.value);" maxlength="6" /></td>
+          </tr>
+          <tr>
+            <td class="labelColumn">Purchase price of home:</td>
+            <td class="valueColumn"><input type="text" name="PPRICE" size="15" value="$175,000" onblur="computeForm(this.form)" onfocus="document.temps.PPRICE.select(); document.temps.PPRICE.focus();" onchange="basicedit();this.value=formatCurrency(this.value);" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn">Down Payment (percentage):</td>
+            <td class="valueColumn"><input type="text" name="DOWN" size="15" value="10%" onblur="computeForm(this.form)" onfocus="document.temps.DOWN.select(); document.temps.DOWN.focus();" onchange="basicedit();this.value=addPct(this.value);" maxlength="5" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn">Interest rate:</td>
+            <td class="valueColumn"><input type="text" name="INT" size="15" value="7.5%" onblur="computeForm(this.form)" onfocus="document.temps.INT.select(); document.temps.INT.focus();" onchange="basicedit();this.value=addPct(this.value);" maxlength="5" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn">Length of loan term (years):</td>
+            <td class="valueColumn"><input type="text" name="YR" size="15" value="30" onblur="computeForm(this.form)" onfocus="document.temps.YR.select(); document.temps.YR.focus();" maxlength="2" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn">How many years do you plan to stay in this home?</td>
+            <td class="valueColumn"><input type="text" name="TERM" size="15" value="7" onblur="computeForm(this.form)" onfocus="document.temps.TERM.select(); document.temps.TERM.focus();" maxlength="2" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn">Annual property tax rate:</td>
+            <td class="valueColumn"><input type="text" name="PropTax" size="15" value="1%" onblur="computeForm(this.form)" onfocus="document.temps.PropTax.select(); document.temps.PropTax.focus();" onchange="basicedit();this.value=addPct(this.value);" maxlength="5" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn">Annual appreciation of home:</td>
+            <td class="valueColumn"><input type="text" name="AnApp" size="15" value="2%" onblur="computeForm(this.form)" onfocus="document.temps.AnApp.select(); document.temps.AnApp.focus();" onchange="basicedit();this.value=addPct(this.value);" maxlength="5" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <input name="button" type="button" class="button" id="calculate" onclick="javascript:computeForm(document.temps);" value="Calculate"/>
+      </div>
+      <div id="containerResultsTable">
+        <div id="tblHdr"> <span id="span_1">Results:</span> <span id="span_2" align="right"><a id="a_printPage" href="javascript:window.print();">print this page</a></span> </div>
+        <div style="clear:both"></div>
+        <table id="table_2" class="table" cellspacing="0">
+          <thead>
+            <tr>
+              <th id="th_3">&nbsp;</th>
+              <th id="th_4">Rent</th>
+              <th id="th_5">Own</th>
+            </tr>
+          </thead>
+          <tfoot>
+          </tfoot>
+          <tbody>
+            <tr class="altColor1">
+              <td class="col1">Total interest paid:</td>
+              <td class="col2">&#160;</td>
+              <td class="col3"><input type="text" name="TotalInt" size="10" /></td>
+            </tr>
+            <tr class="altColor2">
+              <td class="col1">Total property taxes paid:</td>
+              <td class="col2">&#160;</td>
+              <td class="col3"><input type="text" name="TotalPTax" size="10" /></td>
+            </tr>
+            <tr class="altColor1">
+              <td class="col1">Total tax savings:</td>
+              <td class="col2">&#160;</td>
+              <td class="col3"><input type="text" name="TotalTaxS" size="10" /></td>
+            </tr>
+            <tr class="altColor2">
+              <td class="col1">Total monthly payments:</td>
+              <td class="col2"><input type="text" name="TotalRent" size="10" /></td>
+              <td class="col3"><input type="text" name="TotalOwn" size="10" /></td>
+            </tr>
+            <tr class="altColor1">
+              <td class="col1">Average monthly payment:</td>
+              <td class="col2"><input type="text" name="AvgRent" size="10" /></td>
+              <td class="col3"><input type="text" name="AvgOwn" size="10" /></td>
+            </tr>
+            <tr class="altColor2">
+              <td class="col1">Appreciation of home:</td>
+              <td class="col2">&#160;</td>
+              <td class="col3"><input type="text" name="Apprec" size="10" /></td>
+            </tr>
+            <tr class="altColor1">
+              <td class="col1">Savings (down payment amount invested at 10%)</td>
+              <td class="col2"><input type="text" name="Saving" size="10" /></td>
+              <td class="col3">&#160;</td>
+            </tr>
+            <tr class="altColor2">
+              <td class="col1">Total Cost:</td>
+              <td class="col2"><input type="text" name="RentTotal" value="$" size="10" /></td>
+              <td class="col3"><input type="text" name="OwnTotal" value="$" size="10" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <input type="hidden" name="HidePrint" value="1" />
+    </form>
+    <script language="JavaScript" type="text/javascript">
+            //<![CDATA[
+                computeForm(document.forms.temps);
+                document.forms.temps.elements[0].focus();
+                document.forms.temps.elements[0].select();
+            //]]>
+            </script></td>
+  </tr>
+
+</table>
+</body>
+</html>
